@@ -15,6 +15,7 @@ public class PointsManager : MonoBehaviour
     private int currentMultip = 1;
     private WaitForSecondsRealtime multipTimer;
     private Dependencies _dep;
+    private ScoreLoaderManager _scoreloaderManager;
 
 
     private void Awake()
@@ -24,6 +25,7 @@ public class PointsManager : MonoBehaviour
     }
     void Start()
     {
+        _scoreloaderManager = _dep.GetDependancy<ScoreLoaderManager>();
         multipTimer = new WaitForSecondsRealtime(multipTime);
         currentPoints = 0;
         currentMultip = 1;
@@ -45,6 +47,8 @@ public class PointsManager : MonoBehaviour
     {
         currentMultip = 0;
         Time.timeScale = 0;
+        var name = "Test" + Time.time.ToString();
+        _scoreloaderManager.AddOrUpdate(name, (int)currentPoints);
         DeathScreen.SetActive(true);
 
     }

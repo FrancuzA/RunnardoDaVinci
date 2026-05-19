@@ -8,7 +8,12 @@ public class Dependencies : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+
+        }
+        else { Destroy(gameObject); }
     }
 
     private Dictionary<Type, object> dependencies = new();
@@ -39,4 +44,6 @@ public class Dependencies : MonoBehaviour
             dependencies.Remove(typeof(T));
         }
     }
+
+    
 }

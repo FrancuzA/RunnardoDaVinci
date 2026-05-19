@@ -2,13 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Segment
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Segments
   - Water
   - UI
   - 
@@ -41,3 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2176332107
+    locked: 0
+  - name: MidGround
+    uniqueID: 3581286151
+    locked: 0
+  - name: ForGround
+    uniqueID: 3157769421
+    locked: 0
+  - name: Segments
+    uniqueID: 3338981555
+    locked: 0
+  - name: FrontGround
+    uniqueID: 875045477
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []
