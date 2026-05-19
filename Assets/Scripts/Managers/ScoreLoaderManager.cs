@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class ScoreLoaderManager : MonoBehaviour
     {
         _dep = Dependencies.Instance;
         _dep.RegisterDependency<ScoreLoaderManager>(this);
+        DontDestroyOnLoad(this);
     }
 
     void Start()
@@ -33,7 +35,7 @@ public class ScoreLoaderManager : MonoBehaviour
     public void AddNewScore(string name, int points)
     {
         if (IsDuplicate(name, points)) return;
-
+        Debug.Log("Adding new score ");
         AddOrUpdate(name, points);
         SaveScoresToJson();
     }
@@ -58,7 +60,7 @@ public class ScoreLoaderManager : MonoBehaviour
             data.keys.Add(kvp.Key);
             data.values.Add(kvp.Value);
         }
-
+        Debug.Log("Saving to json");
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(filePath, json);
     }

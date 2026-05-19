@@ -16,6 +16,7 @@ public class CameraScipt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_playerObject == null) return;
         var newPosition =new Vector3( _playerObject.transform.position.x,transform.position.y, -1);
         gameObject.transform.SetPositionAndRotation(newPosition,Quaternion.identity);
     }

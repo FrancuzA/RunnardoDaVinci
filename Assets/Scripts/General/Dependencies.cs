@@ -18,7 +18,10 @@ public class Dependencies : MonoBehaviour
 
     private Dictionary<Type, object> dependencies = new();
 
-
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
     public void RegisterDependency<T>(T instance)
     {
         if (dependencies.ContainsKey(typeof(T)))
