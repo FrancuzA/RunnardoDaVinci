@@ -48,7 +48,6 @@ public class PointsManager : MonoBehaviour
         currentMultip = 0;
         Time.timeScale = 0;
         var name = "Test" + Time.time.ToString();
-        Debug.Log($"sending score {name} {currentPoints}");
         _scoreloaderManager.AddNewScore(name, (int)currentPoints);
         DeathScreen.SetActive(true);
 

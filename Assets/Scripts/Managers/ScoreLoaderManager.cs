@@ -29,13 +29,23 @@ public class ScoreLoaderManager : MonoBehaviour
     {
        
         filePath = Application.persistentDataPath + "/scores.json";
+        CheckFileExists();
         LoadScoresFromJson();
+    }
+
+
+    private void CheckFileExists()
+    {
+        if (File.Exists(filePath)) return;
+
+        ScoreData empty = new ScoreData();
+        string json = JsonUtility.ToJson(empty, true);
+        File.WriteAllText(filePath, json);
     }
 
     public void AddNewScore(string name, int points)
     {
         if (IsDuplicate(name, points)) return;
-        Debug.Log("Adding new score ");
         AddOrUpdate(name, points);
         SaveScoresToJson();
     }
@@ -60,7 +70,6 @@ public class ScoreLoaderManager : MonoBehaviour
             data.keys.Add(kvp.Key);
             data.values.Add(kvp.Value);
         }
-        Debug.Log("Saving to json");
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(filePath, json);
     }

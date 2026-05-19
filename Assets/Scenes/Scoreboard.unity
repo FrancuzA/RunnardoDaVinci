@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1605647982}
   m_HandleRect: {fileID: 1605647981}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2127,8 +2127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216f70e705e74c742a7342f679559a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Xalamandrus.TCP.TcpServer
-  _port: 8080
-  _listenIP: 127.0.0.1
+  _port: 59308
+  _listenIP: 0.0.0.0
 --- !u!4 &1424816120
 Transform:
   m_ObjectHideFlags: 0

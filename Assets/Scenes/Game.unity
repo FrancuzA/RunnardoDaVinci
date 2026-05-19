@@ -610,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &688016961
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4683f723d94b584ba3a1b1909e850d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  movementScale: {x: 0.25, y: 0.25, z: 0.25}
+  movementScale: {x: 0.95, y: 0.95, z: 0.95}
 --- !u!212 &1323053016
 SpriteRenderer:
   serializedVersion: 2
