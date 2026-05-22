@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6030372634845713589}
   - component: {fileID: 20211843303352721}
   - component: {fileID: 6080278365754608500}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -955985741
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2537882373423050008, guid: 2d0de094735b394459f052e601ecf8f1, type: 3}

@@ -2127,7 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216f70e705e74c742a7342f679559a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Xalamandrus.TCP.TcpServer
-  _port: 59308
+  _port: 3000
   _listenIP: 0.0.0.0
 --- !u!4 &1424816120
 Transform:

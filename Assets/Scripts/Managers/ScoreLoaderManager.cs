@@ -14,8 +14,8 @@ public class ScoreLoaderManager : MonoBehaviour
     [System.Serializable]
     private class ScoreData
     {
-        public List<string> keys = new List<string>();
-        public List<int> values = new List<int>();
+        public List<string> nick = new List<string>();
+        public List<int> score = new List<int>();
     }
 
     private void Awake()
@@ -58,8 +58,8 @@ public class ScoreLoaderManager : MonoBehaviour
         ScoreData data = JsonUtility.FromJson<ScoreData>(json);
 
         allScores.Clear();
-        for (int i = 0; i < data.keys.Count; i++)
-            allScores[data.keys[i]] = data.values[i];
+        for (int i = 0; i < data.nick.Count; i++)
+            allScores[data.nick[i]] = data.score[i];
     }
 
     public void SaveScoresToJson()
@@ -67,8 +67,8 @@ public class ScoreLoaderManager : MonoBehaviour
         ScoreData data = new ScoreData();
         foreach (var kvp in allScores)
         {
-            data.keys.Add(kvp.Key);
-            data.values.Add(kvp.Value);
+            data.nick.Add(kvp.Key);
+            data.score.Add(kvp.Value);
         }
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(filePath, json);

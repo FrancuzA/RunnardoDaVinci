@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6422724653939676157}
   - component: {fileID: 2624630847877814418}
   - component: {fileID: 4734327409133553612}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: BiEmDablju
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -955985741
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 5b1c9d8f7ecabc74daeebbe14a8a5cb1, type: 3}

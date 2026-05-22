@@ -26,6 +26,7 @@ public class Dependencies : MonoBehaviour
     {
         if (dependencies.ContainsKey(typeof(T)))
         {
+            dependencies[typeof(T)] = instance;
             return;
         }
         dependencies.Add(typeof(T), instance);
