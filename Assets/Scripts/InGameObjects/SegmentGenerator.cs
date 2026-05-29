@@ -10,17 +10,18 @@ public class SegmentGenerator : MonoBehaviour
     public List<GameObject> segmentsL3 = new();
     public float SpawnLenght;
     public float DifficultyIncreasTime;
+    public float StartSpawnPlace;
 
-    private float StartSpawnPlace;
     private float CurrentSpawnPlace;
     private List<GameObject> spawnedSegments = new();
-    private int currentLevel;
+    public int currentLevel;
     private WaitForSecondsRealtime DifficultyIncreasTimer;
 
     private void Start()
     {
         CurrentSpawnPlace = StartSpawnPlace;
         currentLevel = 0;
+        DifficultyIncreasTimer = new WaitForSecondsRealtime(DifficultyIncreasTime);
         StartCoroutine(IncreasDifficulty());
         RNG_Custom.Init(2137);
     }
@@ -52,6 +53,7 @@ public class SegmentGenerator : MonoBehaviour
 
         newSegment.transform.SetPositionAndRotation(new Vector3(CurrentSpawnPlace, 0), Quaternion.identity);
         spawnedSegments.Add(newSegment);
+        CurrentSpawnPlace += SpawnLenght;
     }
 
     public GameObject GetNextSegment(List<GameObject> levelList,int listLenght)

@@ -11,6 +11,7 @@ public class SpawnerTrigger : MonoBehaviour
         if (other.CompareTag("Spawn"))
         {
             OnSpawn.Invoke();
+            this.enabled = false;
         }
     }
 }

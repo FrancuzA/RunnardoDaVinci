@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        if (transform.position.y < -5)  Dependencies.Instance.GetDependancy<PointsManager>()?.Death();
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
