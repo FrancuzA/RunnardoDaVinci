@@ -23,7 +23,8 @@ public class SegmentGenerator : MonoBehaviour
         currentLevel = 0;
         DifficultyIncreasTimer = new WaitForSecondsRealtime(DifficultyIncreasTime);
         StartCoroutine(IncreasDifficulty());
-        RNG_Custom.Init(2137);
+        RNG_Custom.Init(-1);
+        SpawnNewSegment();  
     }
 
     public void SpawnNewSegment()
@@ -34,33 +35,38 @@ public class SegmentGenerator : MonoBehaviour
         switch (currentLevel)
         {
             case 0:  
-                newSegment = GetNextSegment(segmentsL1,segmentsL1.Count);
+                newSegment = GetNextSegment(segmentsL1);
                 segmentsL1.Remove(newSegment);
                 break;
             case 1:  
-                newSegment = GetNextSegment(segmentsL2, segmentsL2.Count);
+                newSegment = GetNextSegment(segmentsL2);
                 segmentsL2.Remove(newSegment);
                 break;
             case 2:  
-                newSegment = GetNextSegment(segmentsL3, segmentsL3.Count);
+                newSegment = GetNextSegment(segmentsL3);
                 segmentsL3.Remove(newSegment);
                 break;
-            default: 
-                newSegment = GetNextSegment(segmentsL3, segmentsL3.Count);
-                segmentsL1.Remove(newSegment);
+            default:
+                newSegment = GetNextSegment(segmentsL3);
+                segmentsL3.Remove(newSegment); 
                 break;
         }
-
+        if (newSegment == null) return;
         newSegment.transform.SetPositionAndRotation(new Vector3(CurrentSpawnPlace, 0), Quaternion.identity);
         spawnedSegments.Add(newSegment);
         CurrentSpawnPlace += SpawnLenght;
     }
 
-    public GameObject GetNextSegment(List<GameObject> levelList,int listLenght)
+    public GameObject GetNextSegment(List<GameObject> levelList)
     {
-        var rNumber = RNG_Custom.NextInt(0, listLenght);
+        if (levelList.Count == 0)
+        {
+            currentLevel--;
+            SpawnNewSegment();
+            return null;
+        }
+        var rNumber = RNG_Custom.NextInt(0, levelList.Count - 1);
         return levelList[rNumber];
-        
     }
 
     public void DespawnSegment()

@@ -8,10 +8,13 @@ public class Player : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
+    public Animator _animator;
 
     private Dependencies _dep;
     private Rigidbody2D _rb;
     private bool _isGrounded;
+    
+    private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
 
     private void Awake()
     {
@@ -27,9 +30,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        if (transform.position.y < -5)  Dependencies.Instance.GetDependancy<PointsManager>()?.Death();
+        _animator.SetBool(IsGrounded, _isGrounded);
+
+        if (transform.position.y < -5) Dependencies.Instance.GetDependancy<PointsManager>()?.Death();
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        {
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0);
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 
     void FixedUpdate()

@@ -7,7 +7,6 @@ public class SpawnerTrigger : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"entered {other}");
         if (other.CompareTag("Spawn"))
         {
             OnSpawn.Invoke();

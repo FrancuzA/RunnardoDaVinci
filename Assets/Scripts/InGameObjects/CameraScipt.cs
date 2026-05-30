@@ -22,7 +22,7 @@ public class CameraScipt : MonoBehaviour
                 return;
         }
 
-        var newPosition = new Vector3(_playerObject.transform.position.x, transform.position.y, -1);
+        var newPosition = new Vector3(_playerObject.transform.position.x+5, transform.position.y, -1);
         gameObject.transform.SetPositionAndRotation(newPosition, Quaternion.identity);
     }
 }
