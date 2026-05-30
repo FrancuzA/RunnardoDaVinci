@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 002cc1d6cd466aa4198fa51ee72ff356
   - enabled: 1
+    path: Assets/Scenes/ScoreboardAuto.unity
+    guid: b6e79004f38a1e5488948da9bc817c19
+  - enabled: 1
     path: Assets/Scenes/ScoreboardEmergency.unity
     guid: 2177caa4ad924b64dbc25123f78fbccf
   m_configObjects:

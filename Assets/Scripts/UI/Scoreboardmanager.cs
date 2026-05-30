@@ -27,14 +27,14 @@ public class Scoreboardmanager : MonoBehaviour
 
     private void Start()
     {
-        nickField.onValueChanged.AddListener(SetNewNick);
-        nickField.onSubmit.AddListener(SetNewNick);
-        scoreField.onSubmit.AddListener(SetNewScore);
-        scoreField.onValueChanged.AddListener(SetNewScore);
-        sendEntry.onClick.AddListener(TrySendEntry);
-        addButton.onClick.AddListener(OpenEntryPopUp);
-        removeLastButton.onClick.AddListener(ClearLastEntry);
-        clearAllButton.onClick.AddListener(ClearWholeList);
+        nickField?.onValueChanged.AddListener(SetNewNick);
+        nickField?.onSubmit.AddListener(SetNewNick);
+        scoreField?.onSubmit.AddListener(SetNewScore);
+        scoreField?.onValueChanged.AddListener(SetNewScore);
+        sendEntry?.onClick.AddListener(TrySendEntry);
+        addButton?.onClick.AddListener(OpenEntryPopUp);
+        removeLastButton?.onClick.AddListener(ClearLastEntry);
+        clearAllButton?.onClick.AddListener(ClearWholeList);
     }
 
 

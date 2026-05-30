@@ -7,6 +7,7 @@ using UnityEngine;
 public class ScoreLoaderManager : MonoBehaviour
 {
     public Dependencies _dep;
+    public string CurrentNick;
 
     private string filePath;
     private Dictionary<string, int> allScores = new Dictionary<string, int>();
@@ -84,5 +85,10 @@ public class ScoreLoaderManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(name) || score == 0) return;
         allScores[name] = score;
+    }
+
+    public Dictionary<string, int> GetAllScores()
+    {
+        return allScores;
     }
 }

@@ -66,6 +66,7 @@ public class FormManager : MonoBehaviour
         if (agreedToTaC && agreedToMarketing && !String.IsNullOrEmpty(currentNick) && !String.IsNullOrEmpty(currentName) && !String.IsNullOrEmpty(currentEmail) && !String.IsNullOrEmpty(currentPhone) && currentPhone.Length == 9)
         {
             SaveFormData();
+            Dependencies.Instance.GetDependancy<ScoreLoaderManager>().CurrentNick = currentNick;
             SceneManager.LoadSceneAsync(1);
         }
     }
