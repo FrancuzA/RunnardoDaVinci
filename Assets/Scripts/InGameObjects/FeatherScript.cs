@@ -6,7 +6,7 @@ public class FeatherScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Dependencies.Instance.GetDependancy<PointsManager>()?.StartMultip();
+            Dependencies.Instance.GetDependancy<PointsManager>().StartMultip();
             gameObject.SetActive(false);
         }
         

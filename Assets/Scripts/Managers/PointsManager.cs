@@ -40,7 +40,7 @@ public class PointsManager : MonoBehaviour
 
     public void StartMultip()
     {
-        if (multipActive) StartCoroutine(Multiplier());
+        if (!multipActive) StartCoroutine(Multiplier());
     }
 
     public void Death()
@@ -65,9 +65,13 @@ public class PointsManager : MonoBehaviour
 
     private IEnumerator Multiplier()
     {
+        multipActive = true;
+        Debug.Log("Multip started");
         currentMultip = pointMultiplier;
         yield return multipTimer;
         currentMultip = 1;
+        Debug.Log("Multip ended");
+        multipActive = false;
     }
 
 

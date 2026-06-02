@@ -22,7 +22,7 @@ public class SegmentGenerator : MonoBehaviour
         CurrentSpawnPlace = StartSpawnPlace;
         currentLevel = 0;
         DifficultyIncreasTimer = new WaitForSecondsRealtime(DifficultyIncreasTime);
-        StartCoroutine(IncreasDifficulty());
+        //StartCoroutine(IncreasDifficulty());
         RNG_Custom.Init(-1);
         SpawnNewSegment();  
     }
