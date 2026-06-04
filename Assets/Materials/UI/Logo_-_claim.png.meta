@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 4028b3d857026674591bc825c89873de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9195003717826117270
+    second: Logo_-_claim_0
+  - first:
+      213: -1476826175668274215
+    second: Logo_-_claim_1
+  - first:
+      213: 8276317740541242548
+    second: Logo_-_claim_2
+  - first:
+      213: 8394776092963639817
+    second: Logo_-_claim_3
+  - first:
+      213: 1670607010011139109
+    second: Logo_-_claim_4
+  - first:
+      213: 4145857724114675648
+    second: Logo_-_claim_5
+  - first:
+      213: -9136508925998453270
+    second: Logo_-_claim_6
+  - first:
+      213: 6111055165997988925
+    second: Logo_-_claim_7
+  - first:
+      213: -3860744833591709561
+    second: Logo_-_claim_8
+  - first:
+      213: 2797272670754037773
+    second: Logo_-_claim_9
+  - first:
+      213: 5587844399418546760
+    second: Logo_-_claim_10
+  - first:
+      213: -1239278713925706505
+    second: Logo_-_claim_11
+  - first:
+      213: 4413790599985613382
+    second: Logo_-_claim_12
+  - first:
+      213: -8133251735077247852
+    second: Logo_-_claim_13
+  - first:
+      213: -1214769714306953681
+    second: Logo_-_claim_14
+  - first:
+      213: 6025957173773438856
+    second: Logo_-_claim_15
+  - first:
+      213: 2786899707064817538
+    second: Logo_-_claim_16
+  - first:
+      213: -4232682072667066182
+    second: Logo_-_claim_17
+  - first:
+      213: 5188052885930545905
+    second: Logo_-_claim_18
+  - first:
+      213: 5330987477543061881
+    second: Logo_-_claim_19
+  - first:
+      213: 5098104165619947882
+    second: Logo_-_claim_20
+  - first:
+      213: 2044840046050100800
+    second: Logo_-_claim_21
+  - first:
+      213: 2270768053467965029
+    second: Logo_-_claim_22
+  - first:
+      213: -2933979072861509129
+    second: Logo_-_claim_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo_-_claim_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61049af5d8c46080800000000000000
+      internalID: -9195003717826117270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db3b44fa62418be0800000000000000
+      internalID: -1476826175668274215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 56
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc693d92236bd270800000000000000
+      internalID: 8276317740541242548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_3
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9021a0e016c308470800000000000000
+      internalID: 8394776092963639817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_4
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ccdfe69303f2710800000000000000
+      internalID: 1670607010011139109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_5
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c72a2762ab098930800000000000000
+      internalID: 4145857724114675648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_6
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed2da20a89943180800000000000000
+      internalID: -9136508925998453270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_7
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c3024bb44dec450800000000000000
+      internalID: 6111055165997988925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_8
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 56
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78077596701eb6ac0800000000000000
+      internalID: -3860744833591709561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_9
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00e3386ca8e1d620800000000000000
+      internalID: 2797272670754037773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_10
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 0
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a9f7720e20c8d40800000000000000
+      internalID: 5587844399418546760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc51ce53923dcee0800000000000000
+      internalID: -1239278713925706505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_12
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ac9195a2fe04d30800000000000000
+      internalID: 4413790599985613382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49424e583a2e02f80800000000000000
+      internalID: -8133251735077247852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_14
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ec4d68165442fe0800000000000000
+      internalID: -1214769714306953681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_15
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f8b766f1080a350800000000000000
+      internalID: 6025957173773438856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_16
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2871d38948e0da620800000000000000
+      internalID: 2786899707064817538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_17
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0f383a41e7245c0800000000000000
+      internalID: -4232682072667066182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_18
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f294ddbc9aaff740800000000000000
+      internalID: 5188052885930545905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_19
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9798205bdd87bf940800000000000000
+      internalID: 5330987477543061881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_20
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6957bb4aba10c640800000000000000
+      internalID: 5098104165619947882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_21
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0464f47103bb06c10800000000000000
+      internalID: 2044840046050100800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_22
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566634a7383638f10800000000000000
+      internalID: 2270768053467965029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_-_claim_23
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 0
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9e8aff3996847d0800000000000000
+      internalID: -2933979072861509129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Logo_-_claim_0: -9195003717826117270
+      Logo_-_claim_1: -1476826175668274215
+      Logo_-_claim_10: 5587844399418546760
+      Logo_-_claim_11: -1239278713925706505
+      Logo_-_claim_12: 4413790599985613382
+      Logo_-_claim_13: -8133251735077247852
+      Logo_-_claim_14: -1214769714306953681
+      Logo_-_claim_15: 6025957173773438856
+      Logo_-_claim_16: 2786899707064817538
+      Logo_-_claim_17: -4232682072667066182
+      Logo_-_claim_18: 5188052885930545905
+      Logo_-_claim_19: 5330987477543061881
+      Logo_-_claim_2: 8276317740541242548
+      Logo_-_claim_20: 5098104165619947882
+      Logo_-_claim_21: 2044840046050100800
+      Logo_-_claim_22: 2270768053467965029
+      Logo_-_claim_23: -2933979072861509129
+      Logo_-_claim_3: 8394776092963639817
+      Logo_-_claim_4: 1670607010011139109
+      Logo_-_claim_5: 4145857724114675648
+      Logo_-_claim_6: -9136508925998453270
+      Logo_-_claim_7: 6111055165997988925
+      Logo_-_claim_8: -3860744833591709561
+      Logo_-_claim_9: 2797272670754037773
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
