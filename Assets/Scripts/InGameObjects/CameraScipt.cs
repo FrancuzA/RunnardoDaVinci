@@ -6,6 +6,8 @@ public class CameraScipt : MonoBehaviour
     private Player _player;
     private GameObject _playerObject;
 
+    public float YOffset;
+
     private void Start()
     {
         _dep = Dependencies.Instance;
@@ -22,7 +24,7 @@ public class CameraScipt : MonoBehaviour
                 return;
         }
 
-        var newPosition = new Vector3(_playerObject.transform.position.x+5, transform.position.y, -1);
+        var newPosition = new Vector3(_playerObject.transform.position.x+5, YOffset , -1);
         gameObject.transform.SetPositionAndRotation(newPosition, Quaternion.identity);
     }
 }

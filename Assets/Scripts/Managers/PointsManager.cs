@@ -34,7 +34,7 @@ public class PointsManager : MonoBehaviour
 
     void Update()
     {
-        currentPoints += (Time.deltaTime * currentMultip);
+        currentPoints += (Time.deltaTime * currentMultip * 100);
         scoreTXT.text = ((int)currentPoints).ToString();
     }
 
@@ -48,7 +48,7 @@ public class PointsManager : MonoBehaviour
         currentMultip = 0;
         Time.timeScale = 0;
         var name = "Test" + Time.time.ToString();
-        _scoreloaderManager?.AddNewScore(_scoreloaderManager.CurrentNick, (int)currentPoints);
+        _scoreloaderManager?.AddNewScore(PlayerPrefs.GetString("CurrentNick", "Null"), (int)currentPoints);
         DeathScreen.SetActive(true);
 
     }
