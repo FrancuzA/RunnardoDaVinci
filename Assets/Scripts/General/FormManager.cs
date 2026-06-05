@@ -13,6 +13,10 @@ public class FormEntry
     public string name;
     public string email;
     public string phone;
+    public bool consentProcessingData;
+    public bool consentMarketingEmail;
+    public bool consentMarketingSms;
+    public bool consentMarketingPhone;
 }
 
 [Serializable]
@@ -28,7 +32,11 @@ public class FormManager : MonoBehaviour
     public TMP_InputField emailInput;
     public TMP_InputField phoneInput;
     public TMP_InputField countryCodeInput;
-    public Toggle marketingToggle;
+    public Toggle marketingToggleAll;
+    public Toggle processingDataToggle;
+    public Toggle marketingEmailToggle;
+    public Toggle marketingSmsToggle;
+    public Toggle marketingPhoneToggle;
     public Toggle TaCToggle;
     public Button playButton;
 
@@ -37,11 +45,8 @@ public class FormManager : MonoBehaviour
     private string currentEmail;
     private string currentPhone;
     private string currentCountryCode;
-    private bool agreedToMarketing = false;
-    private bool agreedToTaC = false;
 
     private string SavePath => Path.Combine(Application.persistentDataPath, "formData.json");
-
     private string FormattedPhone => $"+{currentCountryCode} {currentPhone}";
 
     private void OnEnable()
@@ -51,8 +56,12 @@ public class FormManager : MonoBehaviour
         currentEmail = null;
         currentPhone = null;
         currentCountryCode = null;
-        agreedToMarketing = false;
-        agreedToTaC = false;
+        TaCToggle.isOn = false;
+        processingDataToggle.isOn = false;
+        marketingEmailToggle.isOn = false;
+        marketingSmsToggle.isOn = false;
+        marketingPhoneToggle.isOn = false;
+        marketingToggleAll.isOn = false;
     }
 
     void Start()
@@ -62,14 +71,21 @@ public class FormManager : MonoBehaviour
         emailInput.onValueChanged.AddListener(ChangeEmail);
         phoneInput.onValueChanged.AddListener(ChangePhoneNumber);
         countryCodeInput.onValueChanged.AddListener(ChangeCountryCode);
-        marketingToggle.onValueChanged.AddListener(ChangeMarketingConsent);
-        TaCToggle.onValueChanged.AddListener(ChangeTaCConsent);
+        marketingToggleAll.onValueChanged.AddListener(ToggleAllMarketing);
         playButton.onClick.AddListener(StartGame);
+    }
+
+    public void ToggleAllMarketing(bool value)
+    {
+        processingDataToggle.isOn = value;
+        marketingEmailToggle.isOn = value;
+        marketingSmsToggle.isOn = value;
+        marketingPhoneToggle.isOn = value;
     }
 
     public void StartGame()
     {
-        if (agreedToTaC && agreedToMarketing &&
+        if (TaCToggle.isOn &&
             !String.IsNullOrEmpty(currentNick) &&
             !String.IsNullOrEmpty(currentName) &&
             !String.IsNullOrEmpty(currentEmail) &&
@@ -99,7 +115,11 @@ public class FormManager : MonoBehaviour
             nick = currentNick,
             name = currentName,
             email = currentEmail,
-            phone = FormattedPhone
+            phone = FormattedPhone,
+            consentProcessingData = processingDataToggle.isOn,
+            consentMarketingEmail = marketingEmailToggle.isOn,
+            consentMarketingSms = marketingSmsToggle.isOn,
+            consentMarketingPhone = marketingPhoneToggle.isOn
         });
 
         File.WriteAllText(SavePath, JsonUtility.ToJson(formData, prettyPrint: true));
@@ -110,6 +130,4 @@ public class FormManager : MonoBehaviour
     public void ChangeEmail(string email) => currentEmail = email;
     public void ChangePhoneNumber(string phoneNumber) => currentPhone = phoneNumber;
     public void ChangeCountryCode(string countryCode) => currentCountryCode = countryCode;
-    public void ChangeMarketingConsent(bool hasAgreed) => agreedToMarketing = hasAgreed;
-    public void ChangeTaCConsent(bool hasAgreed) => agreedToTaC = hasAgreed;
 }
