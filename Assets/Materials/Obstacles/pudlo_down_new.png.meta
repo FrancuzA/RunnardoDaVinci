@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8e8684546a4046a4390eb495fe8ed7b8
+guid: f77a5a9b958138e41bd281c08b31eb90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4252860890415189353
-    second: karton_right_0
+      213: 4521143757861790895
+    second: pudlo_down_new_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,29 +96,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: karton_right_0
+      name: pudlo_down_new_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 175
+        width: 176
         height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96d495c7272350b30800000000000000
-      internalID: 4252860890415189353
+      spriteID: fa4a3d13b445ebe30800000000000000
+      internalID: 4521143757861790895
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      karton_right_0: 4252860890415189353
+      pudlo_down_new_0: 4521143757861790895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
