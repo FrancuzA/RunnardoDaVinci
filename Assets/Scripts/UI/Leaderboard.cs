@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
 {
-    [SerializeField] private GameObject entryPrefab;
-    [SerializeField] private Transform entriesContainer;
-    [SerializeField] private float refreshInterval = 10f;
+    [SerializeField] private List<EntryManager> places = new List<EntryManager>();
+    [SerializeField] private float refreshInterval = 1f;
 
     private Dependencies _dep;
     private ScoreLoaderManager _scoreLoader;
+    
 
     private void Awake()
     {
@@ -37,18 +37,17 @@ public class Leaderboard : MonoBehaviour
     {
         _scoreLoader.LoadScoresFromJson();
 
-        foreach (Transform child in entriesContainer)
-            Destroy(child.gameObject);
+        
 
         var sortedEntries = _scoreLoader.GetAllScores()
             .OrderByDescending(entry => entry.Value)
             .ToList();
 
-        foreach (var entry in sortedEntries)
+
+        for(int i = 0; i < 5; i++)
         {
-            GameObject entryGO = Instantiate(entryPrefab, entriesContainer);
-            EntryManager entryManager = entryGO.GetComponent<EntryManager>();
-            entryManager.SetData(entry.Key, entry.Value);
+            var placeInfo = places[i];
+            placeInfo.SetData(sortedEntries[i].Key, sortedEntries[i].Value);
         }
     }
 }
