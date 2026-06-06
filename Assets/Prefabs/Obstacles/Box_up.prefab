@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3303020846474913382}
   - component: {fileID: 4515216043771835259}
   - component: {fileID: 3286373377498456879}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Box_up
   m_TagString: Segment
   m_Icon: {fileID: 0}

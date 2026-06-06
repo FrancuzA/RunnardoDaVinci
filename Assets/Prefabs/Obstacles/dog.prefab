@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4398199847037578451}
   - component: {fileID: 4643038903217829079}
   - component: {fileID: 3007646518172533698}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: dog
   m_TagString: Segment
   m_Icon: {fileID: 0}
