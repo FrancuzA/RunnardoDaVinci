@@ -85,6 +85,16 @@ public class ScoreLoaderManager : MonoBehaviour
         allScores[name] = score;
     }
 
+    public int GetScore(string nick)
+    {
+        if(allScores.TryGetValue(nick, out int score))
+        {
+            return score;
+        }
+
+        return 0;
+    }
+
     public Dictionary<string, int> GetAllScores()
     {
         return allScores;
