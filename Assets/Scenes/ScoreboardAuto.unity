@@ -1965,18 +1965,18 @@ PrefabInstance:
     - target: {fileID: 1323804239283085191, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 85396538}
     - target: {fileID: 1323804239283085191, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1323804239283085191, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitGame
+      value: GoBAckToMEnu
       objectReference: {fileID: 0}
     - target: {fileID: 1323804239283085191, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Mainmenu, Assembly-CSharp
+      value: Leaderboard, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1323804239283085191, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2072,11 +2072,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: daf9ad98babc6e548a7fa689115e8835, type: 3}
     - target: {fileID: 1525542762576651318, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5289530696363137381, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_Name
-      value: MainMenuButtonExit
+      value: ExitToMEnu
       objectReference: {fileID: 0}
     - target: {fileID: 5870396426049742206, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
       propertyPath: m_IsActive

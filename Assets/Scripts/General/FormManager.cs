@@ -27,6 +27,7 @@ public class FormData
 
 public class FormManager : MonoBehaviour
 {
+    public GameObject TutorialScreen;
     public TMP_InputField nickImput;
     public TMP_InputField nameInput;
     public TMP_InputField emailInput;
@@ -96,7 +97,7 @@ public class FormManager : MonoBehaviour
             PlayerPrefs.SetString("CurrentNick", currentNick);
             SaveFormData();
             Dependencies.Instance.GetDependancy<ScoreLoaderManager>().CurrentNick = currentNick;
-            SceneManager.LoadSceneAsync(1);
+            TutorialScreen.SetActive(true);
         }
     }
 
