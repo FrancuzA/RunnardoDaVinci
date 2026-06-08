@@ -87,6 +87,7 @@ public class ScoreLoaderManager : MonoBehaviour
     public void AddOrUpdate(string name, int score)
     {
         if (string.IsNullOrEmpty(name) || score == 0) return;
+        if (allScores[name] > score) return;
         allScores[name] = score;
     }
 

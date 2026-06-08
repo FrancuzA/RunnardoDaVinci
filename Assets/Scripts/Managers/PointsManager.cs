@@ -37,6 +37,7 @@ public class PointsManager : MonoBehaviour
         currentMultip = 1;
         Time.timeScale = 1;
         _newScoreTimer = new WaitForSecondsRealtime(5);
+        highScoreScreen.SetActive(false);
     }
 
     void Update()

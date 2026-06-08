@@ -51,6 +51,7 @@ public class Leaderboard : MonoBehaviour
 
         for(int i = 0; i < 5; i++)
         {
+            if(i>=places.Count || places.Count == 0) continue;
             var placeInfo = places[i];
             placeInfo.SetData(sortedEntries[i].Key, sortedEntries[i].Value);
         }
