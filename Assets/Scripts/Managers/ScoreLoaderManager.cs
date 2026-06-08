@@ -19,6 +19,11 @@ public class ScoreLoaderManager : MonoBehaviour
 
     private void Awake()
     {
+       
+    }
+
+    private void OnEnable()
+    {
         _dep = Dependencies.Instance;
         _dep.RegisterDependency<ScoreLoaderManager>(this);
         DontDestroyOnLoad(this);

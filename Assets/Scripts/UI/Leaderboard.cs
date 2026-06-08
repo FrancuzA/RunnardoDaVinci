@@ -15,6 +15,10 @@ public class Leaderboard : MonoBehaviour
 
     private void Awake()
     {
+        
+    }
+    private void OnEnable()
+    {
         _dep = Dependencies.Instance;
         _scoreLoader = _dep.GetDependancy<ScoreLoaderManager>();
     }
@@ -22,7 +26,7 @@ public class Leaderboard : MonoBehaviour
     private void Start()
     {
         PopulateLeaderboard();
-        StartCoroutine(AutoRefresh());
+        //StartCoroutine(AutoRefresh());
     }
 
     private IEnumerator AutoRefresh()

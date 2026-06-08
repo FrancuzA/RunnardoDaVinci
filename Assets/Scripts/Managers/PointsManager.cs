@@ -59,7 +59,7 @@ public class PointsManager : MonoBehaviour
         var name = "Test" + Time.time.ToString();
         CheckHighScore();
         _scoreloaderManager?.AddNewScore(PlayerPrefs.GetString("CurrentNick", "Null"), (int)currentPoints);
-        StartCoroutine(ShowNewScore());
+        if(madeHighScore) StartCoroutine(ShowNewScore());
         deathScreen.SetActive(true);
 
     }
@@ -94,7 +94,7 @@ public class PointsManager : MonoBehaviour
     private IEnumerator ShowNewScore()
     {
         highScoreScreen.SetActive(true);
-        newHighScoreTXT.text =$"NEW HIGH SCORE: {currentPoints}" ;
+        newHighScoreTXT.text =$"NEW HIGH SCORE: {(int)currentPoints}" ;
         yield return _newScoreTimer;
         highScoreScreen.SetActive(false);
     }
