@@ -343,58 +343,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5249721469382050580}
     m_Modifications:
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 2770130571629507521, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
+      propertyPath: m_Name
+      value: Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.800003
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8549791820454503172, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
-      propertyPath: m_Name
-      value: dog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
---- !u!4 &5673761140449220767 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
+--- !u!4 &7544979937793132181 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
   m_PrefabInstance: {fileID: 1727044610241895979}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3816319378496432108
@@ -595,58 +595,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5249721469382050580}
     m_Modifications:
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 2770130571629507521, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
+      propertyPath: m_Name
+      value: Dog (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7999954
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+    - target: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8549791820454503172, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
-      propertyPath: m_Name
-      value: dog (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
---- !u!4 &7259437996999366551 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
+--- !u!4 &4807219388507818397 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6434111554116683444, guid: b28ee7b7484fba14296b2eee6ddeb68c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9170057454562793662, guid: 52c6e668bf14fe640a7d88cc90db9e30, type: 3}
   m_PrefabInstance: {fileID: 4464257156048376099}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5884907894182620690

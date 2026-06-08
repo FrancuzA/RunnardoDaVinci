@@ -29,6 +29,6 @@ public class Mainmenu : MonoBehaviour
 
     public void UnlockScoreboard()
     {
-        scoreboardButton.SetActive(true);
+        SceneManager.LoadSceneAsync(3);
     }
 }

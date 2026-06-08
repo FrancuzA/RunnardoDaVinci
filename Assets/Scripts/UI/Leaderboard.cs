@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Leaderboard : MonoBehaviour
 {
@@ -49,5 +50,10 @@ public class Leaderboard : MonoBehaviour
             var placeInfo = places[i];
             placeInfo.SetData(sortedEntries[i].Key, sortedEntries[i].Value);
         }
+    }
+
+    public void GoBAckToMEnu()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }
