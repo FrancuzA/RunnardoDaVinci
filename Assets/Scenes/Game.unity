@@ -1741,7 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4683f723d94b584ba3a1b1909e850d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  movementScale: {x: 0.1, y: 1, z: 0.5}
+  movementScale: {x: 0.1, y: 1.3, z: 0.5}
 --- !u!1 &1254567905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4353297177263865070, guid: 9ddc93670d947274486e3c28c87b5bed, type: 3}
