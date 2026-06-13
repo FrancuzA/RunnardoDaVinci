@@ -40,6 +40,8 @@ public class FormManager : MonoBehaviour
     public Toggle marketingPhoneToggle;
     public Toggle TaCToggle;
     public Button playButton;
+    public Color invalidColor = Color.red;
+    public Color toggleNormalColor = Color.white;
 
     private string currentNick;
     private string currentName;
@@ -86,18 +88,12 @@ public class FormManager : MonoBehaviour
 
     public void StartGame()
     {
-        if (TaCToggle.isOn &&
-            !String.IsNullOrEmpty(currentNick) &&
-            !String.IsNullOrEmpty(currentName) &&
-            !String.IsNullOrEmpty(currentEmail) &&
-            !String.IsNullOrEmpty(currentPhone) &&
-            !String.IsNullOrEmpty(currentCountryCode) &&
-            currentPhone.Length == 9)
+        if (ValidateForm())
         {
             PlayerPrefs.SetString("CurrentNick", currentNick);
             SaveFormData();
             Dependencies.Instance.GetDependancy<ScoreLoaderManager>().CurrentNick = currentNick;
-            TutorialScreen.SetActive(true);
+            SceneManager.LoadSceneAsync(1);
         }
     }
 
@@ -131,4 +127,33 @@ public class FormManager : MonoBehaviour
     public void ChangeEmail(string email) => currentEmail = email;
     public void ChangePhoneNumber(string phoneNumber) => currentPhone = phoneNumber;
     public void ChangeCountryCode(string countryCode) => currentCountryCode = countryCode;
+
+    private bool ValidateForm()
+    {
+        bool isValid = true;
+
+        isValid &= ValidateField(nickImput, !String.IsNullOrEmpty(currentNick));
+        isValid &= ValidateField(nameInput, !String.IsNullOrEmpty(currentName));
+        isValid &= ValidateField(emailInput, !String.IsNullOrEmpty(currentEmail));
+        isValid &= ValidateField(countryCodeInput, !String.IsNullOrEmpty(currentCountryCode));
+        isValid &= ValidateField(phoneInput, !String.IsNullOrEmpty(currentPhone) && currentPhone.Length == 9);
+        isValid &= ValidateToggle(TaCToggle, TaCToggle.isOn);
+
+        return isValid;
+    }
+
+    private bool ValidateField(TMP_InputField field, bool condition)
+    {
+        Image bg = field.GetComponent<Image>();
+        bg.color = condition ? Color.white : invalidColor;
+        return condition;
+    }
+
+    private bool ValidateToggle(Toggle toggle, bool condition)
+    {
+        var colors = toggle.colors;
+        colors.normalColor = condition ? toggleNormalColor : invalidColor;
+        toggle.colors = colors;
+        return condition;
+    }
 }
