@@ -12,6 +12,7 @@ public class PointsManager : MonoBehaviour
     public float multipTime;
     public TextMeshProUGUI scoreTXT;
     public TextMeshProUGUI newHighScoreTXT;
+    public TextMeshProUGUI currentHighScoreTXT;
     public GameObject deathScreen;
     public GameObject highScoreScreen;
 
@@ -36,7 +37,9 @@ public class PointsManager : MonoBehaviour
         currentPoints = 0;
         currentMultip = 1;
         Time.timeScale = 1;
-        _newScoreTimer = new WaitForSecondsRealtime(5);
+        var lastHighScore = _scoreloaderManager?.GetHighestScore();
+        currentHighScoreTXT.text = $"Best: {lastHighScore}";
+        _newScoreTimer = new WaitForSecondsRealtime(3);
         highScoreScreen.SetActive(false);
     }
 

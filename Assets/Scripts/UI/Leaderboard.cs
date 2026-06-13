@@ -26,7 +26,7 @@ public class Leaderboard : MonoBehaviour
     private void Start()
     {
         PopulateLeaderboard();
-        //StartCoroutine(AutoRefresh());
+        StartCoroutine(AutoRefresh());
     }
 
     private IEnumerator AutoRefresh()

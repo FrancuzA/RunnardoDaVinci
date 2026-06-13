@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using System.Linq;
 
 public class ScoreLoaderManager : MonoBehaviour
 {
@@ -94,6 +95,16 @@ public class ScoreLoaderManager : MonoBehaviour
         allScores[name] = score;
     }
 
+    public int GetHighestScore()
+    {
+        LoadScoresFromJson();
+        var sortedEntries = GetAllScores()
+            .OrderByDescending(entry => entry.Value)
+            .ToList();
+        if(sortedEntries.Count == 0) return 0;
+        return sortedEntries[0].Value;
+
+    }
     public int GetScore(string nick)
     {
         if(allScores.TryGetValue(nick, out int score))
