@@ -75,7 +75,7 @@ public class FormManager : MonoBehaviour
         phoneInput.onValueChanged.AddListener(ChangePhoneNumber);
         countryCodeInput.onValueChanged.AddListener(ChangeCountryCode);
         marketingToggleAll.onValueChanged.AddListener(ToggleAllMarketing);
-        playButton.onClick.AddListener(StartGame);
+        playButton.onClick.AddListener(GoToTutorial);
     }
 
     public void ToggleAllMarketing(bool value)
@@ -86,14 +86,14 @@ public class FormManager : MonoBehaviour
         marketingPhoneToggle.isOn = value;
     }
 
-    public void StartGame()
+    public void GoToTutorial()
     {
         if (ValidateForm())
         {
+            TutorialScreen.SetActive(true);
             PlayerPrefs.SetString("CurrentNick", currentNick);
             SaveFormData();
             Dependencies.Instance.GetDependancy<ScoreLoaderManager>().CurrentNick = currentNick;
-            SceneManager.LoadSceneAsync(1);
         }
     }
 
