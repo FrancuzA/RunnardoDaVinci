@@ -33,7 +33,7 @@ public class Scoreboardmanager : MonoBehaviour
 
     private void Start()
     {
-        _scoreLoader = Dependencies.Instance.GetDependancy<ScoreLoaderManager>();
+        _scoreLoader = Dependencies.Instance?.GetDependancy<ScoreLoaderManager>();
 
         addNickField?.onValueChanged.AddListener(SetNewNick);
         addScoreField?.onValueChanged.AddListener(SetNewScore);
@@ -78,7 +78,7 @@ public class Scoreboardmanager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(newNick) || newScore == 0) return;
 
-        _scoreLoader.AddNewScore(newNick, newScore);
+        _scoreLoader?.AddNewScore(newNick, newScore);
 
         addNickField.text = "";
         addScoreField.text = "";
@@ -93,7 +93,7 @@ public class Scoreboardmanager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(removeNick)) return;
 
-        _scoreLoader.RemoveScore(removeNick);
+        _scoreLoader?.RemoveScore(removeNick);
 
         removeNickField.text = "";
         removeNick = null;
@@ -104,13 +104,13 @@ public class Scoreboardmanager : MonoBehaviour
 
     public void ReloadEntrys()
     {
-        var sortedList = _scoreLoader.GetAllScores()
+        var sortedList = _scoreLoader?.GetAllScores()
             .OrderByDescending(entry => entry.Value)
             .ToList();
 
         for (int i = 0; i < entrySlots.Count; i++)
         {
-            if (i < sortedList.Count)
+            if (i < sortedList?.Count)
                 entrySlots[i].SetData(sortedList[i].Key, sortedList[i].Value);
             else
                 entrySlots[i].SetData("---", 0);
