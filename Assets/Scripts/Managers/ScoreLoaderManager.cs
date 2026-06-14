@@ -115,6 +115,13 @@ public class ScoreLoaderManager : MonoBehaviour
         return 0;
     }
 
+    public void RemoveScore(string nick)
+    {
+        if (string.IsNullOrEmpty(nick)) return;
+        if (allScores.Remove(nick))
+            SaveScoresToJson();
+    }
+
     public Dictionary<string, int> GetAllScores()
     {
         return allScores;

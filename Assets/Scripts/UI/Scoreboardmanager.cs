@@ -1,131 +1,119 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Scoreboardmanager : MonoBehaviour
 {
+    [Header("Leaderboard Slots")]
+    public List<EntryManager> entrySlots = new List<EntryManager>(11);
+
+    [Header("Add Popup")]
     public GameObject addEntryPopUp;
-    public GameObject entryPrefab;
-    public GameObject Content;
-    public TMP_InputField nickField;
-    public TMP_InputField scoreField;
-    public Button sendEntry;
+    public TMP_InputField addNickField;
+    public TMP_InputField addScoreField;
+    public Button confirmAddButton;
+
+    [Header("Remove Popup")]
+    public GameObject removeEntryPopUp;
+    public TMP_InputField removeNickField;
+    public Button confirmRemoveButton;
+
+    [Header("Main Buttons")]
+    public Button backButton;
     public Button addButton;
-    public Button removeLastButton;
-    public Button clearAllButton;
+    public Button removeButton;
 
-
-
-    private Dictionary<string, int> scores = new Dictionary<string, int>();
-    private string lastEntry;
-    private string currentName;
-    private int currentScore;
+    private ScoreLoaderManager _scoreLoader;
+    private string newNick;
+    private int newScore;
+    private string removeNick;
 
     private void Start()
     {
-        nickField?.onValueChanged.AddListener(SetNewNick);
-        nickField?.onSubmit.AddListener(SetNewNick);
-        scoreField?.onSubmit.AddListener(SetNewScore);
-        scoreField?.onValueChanged.AddListener(SetNewScore);
-        sendEntry?.onClick.AddListener(TrySendEntry);
-        addButton?.onClick.AddListener(OpenEntryPopUp);
-        removeLastButton?.onClick.AddListener(ClearLastEntry);
-        clearAllButton?.onClick.AddListener(ClearWholeList);
+        _scoreLoader = Dependencies.Instance.GetDependancy<ScoreLoaderManager>();
+
+        addNickField?.onValueChanged.AddListener(SetNewNick);
+        addScoreField?.onValueChanged.AddListener(SetNewScore);
+        removeNickField?.onValueChanged.AddListener(SetRemoveNick);
+
+        confirmAddButton?.onClick.AddListener(TryAddEntry);
+        confirmRemoveButton?.onClick.AddListener(TryRemoveEntry);
+
+        backButton?.onClick.AddListener(GoBack);
+        addButton?.onClick.AddListener(OpenAddPopUp);
+        removeButton?.onClick.AddListener(OpenRemovePopUp);
+
+        ReloadEntrys();
     }
 
+    public void GoBack()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
 
-    public void OpenEntryPopUp()
+    public void OpenAddPopUp()
     {
         addEntryPopUp.SetActive(true);
     }
 
-    public void ClearLastEntry()
+    public void OpenRemovePopUp()
     {
-        Remove(lastEntry);
-        ReloadEntrys();
-
+        removeEntryPopUp.SetActive(true);
     }
 
-    public void ClearWholeList()
-    {
-        Clear();
-        ReloadEntrys();
-
-    }
-
-    public void SetNewNick(string name)
-    {
-        if (Contains(name))
-        {
-            nickField.textComponent.color = Color.red;
-            currentName = "";
-            return;
-        }
-        if(nickField.textComponent.color == Color.red) nickField.textComponent.color = Color.black;
-        currentName = name;
-    }
+    public void SetNewNick(string nick) => newNick = nick;
 
     public void SetNewScore(string score)
     {
         if (int.TryParse(score, out int parsed))
-            currentScore = parsed;
+            newScore = parsed;
+    }
+
+    public void SetRemoveNick(string nick) => removeNick = nick;
+
+    public void TryAddEntry()
+    {
+        if (string.IsNullOrEmpty(newNick) || newScore == 0) return;
+
+        _scoreLoader.AddNewScore(newNick, newScore);
+
+        addNickField.text = "";
+        addScoreField.text = "";
+        newNick = null;
+        newScore = 0;
+
+        addEntryPopUp.SetActive(false);
+        ReloadEntrys();
+    }
+
+    public void TryRemoveEntry()
+    {
+        if (string.IsNullOrEmpty(removeNick)) return;
+
+        _scoreLoader.RemoveScore(removeNick);
+
+        removeNickField.text = "";
+        removeNick = null;
+
+        removeEntryPopUp.SetActive(false);
+        ReloadEntrys();
     }
 
     public void ReloadEntrys()
     {
-        Content.transform.DestroyAllChildren();
-        if (scores.Count == 0) return;
-        var sortedList = scores.OrderByDescending(entry => entry.Value).ToList();
-        foreach (var entry in sortedList)
+        var sortedList = _scoreLoader.GetAllScores()
+            .OrderByDescending(entry => entry.Value)
+            .ToList();
+
+        for (int i = 0; i < entrySlots.Count; i++)
         {
-            var entryGO = Instantiate(entryPrefab, Content.transform);
-
-            EntryManager DataManger = entryGO.GetComponent<EntryManager>();
-            DataManger?.SetData(entry.Key, entry.Value);
+            if (i < sortedList.Count)
+                entrySlots[i].SetData(sortedList[i].Key, sortedList[i].Value);
+            else
+                entrySlots[i].SetData("---", 0);
         }
-        
-    }
-
-    public void TrySendEntry()
-    {
-        if (currentName == null || currentScore == 0) return;
-        AddEntry(currentName, currentScore);
-        lastEntry = currentName;
-        nickField.text = "";
-        scoreField.text = "";
-        addEntryPopUp.SetActive(false);
-        ReloadEntrys();
-        currentName = null;
-        currentScore = 0;
-    }
-
-    private void AddEntry(string name, int score)
-    {
-        scores.Add(name, score);
-    }
-
-    public bool Remove(string name)
-    {
-        if (name == null)
-            return false;
-
-        return scores.Remove(name);
-    }
-
-    public bool Contains(string name)
-    {
-        if (name == null)
-            return false;
-
-        return scores.ContainsKey(name);
-    }
-
-    public void Clear()
-    {
-        scores.Clear();
     }
 }
