@@ -51,7 +51,8 @@ public class PointsManager : MonoBehaviour
 
     public void StartMultip()
     {
-        if (!multipActive) StartCoroutine(Multiplier());
+        //if (!multipActive) StartCoroutine(Multiplier());
+        currentPoints += 100;
     }
 
     public void Death()
