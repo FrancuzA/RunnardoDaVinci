@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
     public Animator _animator;
+    public ParticleSystem _trail;
 
     private Dependencies _dep;
     private Rigidbody2D _rb;
@@ -39,6 +40,10 @@ public class Player : MonoBehaviour
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0);
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+
+        if (_isGrounded) _trail.Pause();
+        if (!_isGrounded) _trail.Play();
+
     }
 
     void FixedUpdate()
