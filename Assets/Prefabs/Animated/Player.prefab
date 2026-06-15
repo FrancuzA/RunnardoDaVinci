@@ -92,9 +92,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &90302162338580385
 CapsuleCollider2D:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   jumpForce: 11
   runSpeed: 5
-  acceleration: 0.4
+  acceleration: 0.1
   groundCheck: {fileID: 4541167102330176291}
   groundCheckRadius: 0.3
   groundLayer:
@@ -430,29 +430,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9132163597708888490}
     m_Modifications:
-    - target: {fileID: 2561174949386858866, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3556878138382470843, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
       propertyPath: m_Name
       value: DiCaprio_Visual
-      objectReference: {fileID: 0}
-    - target: {fileID: 3867335561750517861, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524274276295664259, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452247591845218113, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8622269936792041486, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723228657992914683, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -493,10 +473,6 @@ PrefabInstance:
     - target: {fileID: 8723228657992914683, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8939008309183864180, guid: 628e04cac2bd2064d88b8013bc85f7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
