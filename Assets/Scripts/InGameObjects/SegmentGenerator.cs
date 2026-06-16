@@ -51,9 +51,7 @@ public class SegmentGenerator : MonoBehaviour
                 break;
         }
         if (newSegment == null) return;
-        Debug.Log($"[SPAWN] Moving {newSegment.name} (id={newSegment.GetEntityId()}) to x={CurrentSpawnPlace}");
         newSegment.transform.SetPositionAndRotation(new Vector3(CurrentSpawnPlace, 0), Quaternion.identity);
-        Debug.Log($"[SPAWN] After move: {newSegment.name} (id={newSegment.GetEntityId()}) position={newSegment.transform.position}");
         spawnedSegments.Add(newSegment);
         CurrentSpawnPlace += SpawnLenght;
     }

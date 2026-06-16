@@ -9,10 +9,5 @@ public class SegmentInfo : MonoBehaviour
     {
        StartingPosition = transform.position; 
     }
-    void LateUpdate()
-    {
-        if (gameObject.name == "Segment36")
-            Debug.Log($"[LateUpdate] Segment36 (id={GetEntityId()}) at {transform.position}");
-    }
 
 }
