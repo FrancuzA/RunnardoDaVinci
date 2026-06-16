@@ -40,8 +40,8 @@ public class Player : MonoBehaviour
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (_isGrounded) _trail.Pause();
-        if (!_isGrounded) _trail.Play();
+        if (!_isGrounded) _trail.Pause();
+        if (_isGrounded) _trail.Play();
 
     }
 
