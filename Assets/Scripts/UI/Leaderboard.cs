@@ -47,7 +47,7 @@ public class Leaderboard : MonoBehaviour
         var sortedEntries = _scoreLoader.GetAllScores()
             .OrderByDescending(entry => entry.Value)
             .ToList();
-
+        if (sortedEntries.Count == 0) return;
 
         for(int i = 0; i < 5; i++)
         {
