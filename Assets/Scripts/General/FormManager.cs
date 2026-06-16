@@ -58,7 +58,8 @@ public class FormManager : MonoBehaviour
         currentName = null;
         currentEmail = null;
         currentPhone = null;
-        currentCountryCode = null;
+        currentCountryCode = "48";
+        countryCodeInput.text = "48";
         TaCToggle.isOn = false;
         processingDataToggle.isOn = false;
         marketingEmailToggle.isOn = false;
