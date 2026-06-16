@@ -6,7 +6,7 @@ using UnityEngine;
 public class SegmentGenerator : MonoBehaviour
 {
     public List<GameObject> segmentsL1 = new();
-    public List<GameObject> segmentsL2 = new ();
+    public List<GameObject> segmentsL2 = new();
     public List<GameObject> segmentsL3 = new();
     public float SpawnLenght;
     public float DifficultyIncreasTime;
@@ -24,58 +24,49 @@ public class SegmentGenerator : MonoBehaviour
         DifficultyIncreasTimer = new WaitForSecondsRealtime(DifficultyIncreasTime);
         StartCoroutine(IncreasDifficulty());
         RNG_Custom.Init(-1);
-        SpawnNewSegment();  
+        SpawnNewSegment();
     }
 
     public void SpawnNewSegment()
     {
         GameObject newSegment = null;
 
-
         switch (currentLevel)
         {
-            case 0:  
+            case 0:
                 newSegment = GetNextSegment(segmentsL1);
                 segmentsL1.Remove(newSegment);
                 break;
-            case 1:  
+            case 1:
                 newSegment = GetNextSegment(segmentsL2);
                 segmentsL2.Remove(newSegment);
                 break;
-            case 2:  
+            case 2:
                 newSegment = GetNextSegment(segmentsL3);
                 segmentsL3.Remove(newSegment);
                 break;
             default:
                 newSegment = GetNextSegment(segmentsL3);
-                segmentsL3.Remove(newSegment); 
+                segmentsL3.Remove(newSegment);
                 break;
         }
         if (newSegment == null) return;
+        Debug.Log($"[SPAWN] Moving {newSegment.name} (id={newSegment.GetEntityId()}) to x={CurrentSpawnPlace}");
         newSegment.transform.SetPositionAndRotation(new Vector3(CurrentSpawnPlace, 0), Quaternion.identity);
+        Debug.Log($"[SPAWN] After move: {newSegment.name} (id={newSegment.GetEntityId()}) position={newSegment.transform.position}");
         spawnedSegments.Add(newSegment);
         CurrentSpawnPlace += SpawnLenght;
     }
 
-    public GameObject GetNextSegment(List<GameObject> levelList)
-    {
-        if (levelList.Count == 0)
-        {
-            currentLevel--;
-            SpawnNewSegment();
-            return null;
-        }
-        var rNumber = RNG_Custom.NextInt(0, levelList.Count - 1);
-        return levelList[rNumber];
-    }
-
     public void DespawnSegment()
     {
-       var despawnSegment = spawnedSegments[0];
-       despawnSegment.transform.SetPositionAndRotation(despawnSegment.GetComponent<SegmentInfo>().StartingPosition, Quaternion.identity);
+        var despawnSegment = spawnedSegments[0];
+       
+        despawnSegment.transform.SetPositionAndRotation(despawnSegment.GetComponent<SegmentInfo>().StartingPosition, Quaternion.identity);
         switch (despawnSegment.GetComponent<SegmentInfo>().Level)
         {
-            case 0: segmentsL1.Add(despawnSegment);
+            case 0:
+                segmentsL1.Add(despawnSegment);
                 break;
             case 1:
                 segmentsL2.Add(despawnSegment);
@@ -83,10 +74,28 @@ public class SegmentGenerator : MonoBehaviour
             case 2:
                 segmentsL3.Add(despawnSegment);
                 break;
-            default: segmentsL1.Add(despawnSegment);
+            default:
+                segmentsL1.Add(despawnSegment);
                 break;
         }
-       spawnedSegments.Remove(despawnSegment);
+        spawnedSegments.Remove(despawnSegment);
+    }
+
+    public GameObject GetNextSegment(List<GameObject> levelList)
+    {
+        if (levelList.Count == 0)
+        {
+            if (currentLevel <= 0)
+            {
+                Debug.LogWarning("No segments available in any pool!");
+                return null;
+            }
+            currentLevel--;
+            SpawnNewSegment();
+            return null;
+        }
+        var rNumber = RNG_Custom.NextInt(0, levelList.Count - 1);
+        return levelList[rNumber];
     }
 
     public IEnumerator IncreasDifficulty()

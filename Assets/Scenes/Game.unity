@@ -1775,9 +1775,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1003197906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4921567217774255834, guid: 1dcddafdb7bc0304d83069413b871186, type: 3}
+--- !u!198 &1003197907 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3200825397784761444, guid: 1dcddafdb7bc0304d83069413b871186, type: 3}
   m_PrefabInstance: {fileID: 7530894163056001328}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010230215
@@ -2235,7 +2235,7 @@ MonoBehaviour:
   - {fileID: 8520684018791405748}
   - {fileID: 6480159113307081646}
   - {fileID: 5561547504917731990}
-  - {fileID: 343753549978774394, guid: cc93bb8db569df947b40a22597ce32d8, type: 3}
+  - {fileID: 2121397969}
   SpawnLenght: 33
   DifficultyIncreasTime: 20
   StartSpawnPlace: 49.5
@@ -2968,6 +2968,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1486371960872202380, guid: 40b32e7324975814da706d2d1dadb241, type: 3}
   m_PrefabInstance: {fileID: 892049711}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2121397969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 343753549978774394, guid: cc93bb8db569df947b40a22597ce32d8, type: 3}
+  m_PrefabInstance: {fileID: 7692708677408333337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2146385149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5554718276756692822, guid: db0fe3a83bbc6de4eb24cd86c564227d, type: 3}
@@ -3164,7 +3169,7 @@ PrefabInstance:
     - target: {fileID: 9219385477468128645, guid: 432972c49b50c824880c1e94a3862ec8, type: 3}
       propertyPath: _trail
       value: 
-      objectReference: {fileID: 1003197906}
+      objectReference: {fileID: 1003197907}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

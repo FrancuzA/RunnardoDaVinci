@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        Debug.Log(_isGrounded);
         _animator.SetBool(IsGrounded, _isGrounded);
 
         if (transform.position.y < -5) Dependencies.Instance.GetDependancy<PointsManager>()?.Death();

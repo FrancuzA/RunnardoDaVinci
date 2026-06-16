@@ -7,7 +7,7 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Dependencies.Instance.GetDependancy<PointsManager>()?.Death();
+          //  Dependencies.Instance.GetDependancy<PointsManager>()?.Death();
         }
     }
 }

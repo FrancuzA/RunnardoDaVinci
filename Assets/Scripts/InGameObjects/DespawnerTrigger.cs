@@ -11,7 +11,6 @@ public class DespawnerTrigger : MonoBehaviour
         if (other.CompareTag("Despawn"))
         {
             OnDespawn.Invoke();
-            this.enabled = false;
         }
     }
 }
