@@ -13,12 +13,13 @@ public class PointsManager : MonoBehaviour
     public TextMeshProUGUI scoreTXT;
     public TextMeshProUGUI newHighScoreTXT;
     public TextMeshProUGUI currentHighScoreTXT;
+    public TextMeshProUGUI currentNick;
     public GameObject deathScreen;
     public GameObject highScoreScreen;
+    public GameObject addedPoints;
 
     private bool multipActive = false;
     private bool madeHighScore = false;
-    private int currentMultip = 1;
     private WaitForSecondsRealtime multipTimer;
     private Dependencies _dep;
     private ScoreLoaderManager _scoreloaderManager;
@@ -35,31 +36,29 @@ public class PointsManager : MonoBehaviour
         _scoreloaderManager = _dep.GetDependancy<ScoreLoaderManager>();
         multipTimer = new WaitForSecondsRealtime(multipTime);
         currentPoints = 0;
-        currentMultip = 1;
         Time.timeScale = 1;
         var lastHighScore = _scoreloaderManager?.GetHighestScore();
         currentHighScoreTXT.text = $"Best: {lastHighScore}";
         _newScoreTimer = new WaitForSecondsRealtime(3);
         highScoreScreen.SetActive(false);
+        currentNick.text = PlayerPrefs.GetString("CurrentNick", "Null");
     }
 
     void Update()
     {
-        currentPoints += (Time.deltaTime * currentMultip * 100);
+        currentPoints += (Time.deltaTime * 100);
         scoreTXT.text = ((int)currentPoints).ToString();
     }
 
     public void StartMultip()
     {
-        //if (!multipActive) StartCoroutine(Multiplier());
-        currentPoints += 100;
+        StartCoroutine(Multiplier());
     }
 
     public void Death()
     {
         madeHighScore = false;
         CheckHighScore();
-        currentMultip = 0;
         Time.timeScale = 0;
         var name = "Test" + Time.time.ToString();
         CheckHighScore();
@@ -82,18 +81,18 @@ public class PointsManager : MonoBehaviour
 
     public void GoHome()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
     private IEnumerator Multiplier()
     {
         multipActive = true;
-        Debug.Log("Multip started");
-        currentMultip = pointMultiplier;
+        addedPoints.SetActive(true);
+        currentPoints += 100;
         yield return multipTimer;
-        currentMultip = 1;
-        Debug.Log("Multip ended");
         multipActive = false;
+        addedPoints.SetActive(false);
     }
 
     private IEnumerator ShowNewScore()

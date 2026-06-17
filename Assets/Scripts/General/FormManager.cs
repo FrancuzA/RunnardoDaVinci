@@ -48,6 +48,7 @@ public class FormManager : MonoBehaviour
     private string currentEmail;
     private string currentPhone;
     private string currentCountryCode;
+    private ScoreLoaderManager scoreData;
 
     private string SavePath => Path.Combine(Application.persistentDataPath, "formData.json");
     private string FormattedPhone => $"+{currentCountryCode} {currentPhone}";
@@ -66,6 +67,7 @@ public class FormManager : MonoBehaviour
         marketingSmsToggle.isOn = false;
         marketingPhoneToggle.isOn = false;
         marketingToggleAll.isOn = false;
+        scoreData = Dependencies.Instance?.GetDependancy<ScoreLoaderManager>();
     }
 
     void Start()
@@ -123,7 +125,17 @@ public class FormManager : MonoBehaviour
         File.WriteAllText(SavePath, JsonUtility.ToJson(formData, prettyPrint: true));
     }
 
-    public void ChangeNick(string nick) => currentNick = nick;
+    public void ChangeNick(string nick) 
+    {
+        scoreData.LoadScoresFromJson();
+        var allScores = scoreData.GetAllScores();
+        if (allScores.ContainsKey(nick))
+        {
+            currentNick = "";
+            return;
+        }
+        currentNick = nick;
+    }
     public void ChangeName(string name) => currentName = name;
     public void ChangeEmail(string email) => currentEmail = email;
     public void ChangePhoneNumber(string phoneNumber) => currentPhone = phoneNumber;
