@@ -13,8 +13,9 @@ public class Player : MonoBehaviour
 
     private Dependencies _dep;
     private Rigidbody2D _rb;
+    private bool _wasGrounded;
     private bool _isGrounded;
-    
+    private float _lastX;
     private static readonly int IsGrounded = Animator.StringToHash("isGrounded");
 
     private void Awake()
@@ -25,29 +26,44 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        _trail.Play();
         _rb = GetComponent<Rigidbody2D>();
+        _wasGrounded = true;
     }
+
 
     void Update()
     {
+        Debug.Log(_rb.linearVelocity.x);
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         _animator.SetBool(IsGrounded, _isGrounded);
 
         if (transform.position.y < -5) Dependencies.Instance.GetDependancy<PointsManager>()?.Death();
+
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, 0);
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (!_isGrounded) _trail.Pause();
-        if (_isGrounded) _trail.Play();
+        if (_isGrounded != _wasGrounded)
+        {
+            if (_isGrounded) _trail.Play();
+            else _trail.Pause();
+            _wasGrounded = _isGrounded;
+        }
 
+        _rb.linearVelocity = new Vector2(runSpeed, _rb.linearVelocity.y);
     }
 
     void FixedUpdate()
     {
         runSpeed += acceleration * Time.fixedDeltaTime;
+        _rb.linearVelocity = new Vector2(runSpeed, _rb.linearVelocity.y);
+    }
+
+    void LateUpdate()
+    {
         _rb.linearVelocity = new Vector2(runSpeed, _rb.linearVelocity.y);
     }
 }
