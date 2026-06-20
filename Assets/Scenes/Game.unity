@@ -418,7 +418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b6095bb3ca0a014082df8bd67f59688, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbae028bdb5bfc442bd4ca66170f5fd3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1015,7 +1015,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: ec3c7be8ab11eef44a64df0547ca7c6b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 330881c4920032846b23f45b6bb15701, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
